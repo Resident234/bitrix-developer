@@ -1,0 +1,60 @@
+::-ms-reveal,
+::-ms-clear {
+  display: none !important;
+}
+
+.hideShowPassword-wrapper {
+	width: 100% !important;
+}
+
+.hideShowPassword-toggle {
+	right: 18px !important;
+	top: 50%;
+	margin-top: -7px;
+  width: 31px;
+  height: 15px;
+  cursor: pointer;
+  max-height: 100%;
+  padding: 0;
+  overflow: 'hidden';
+  text-indent: -999em;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  position: absolute;
+  background-color: transparent;
+	border: 0;
+	outline: none;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+	  .svg-icon(icon-wink, 31px, 15px);
+    z-index: 30;
+	  margin-top: -7px;
+	  margin-left: -15px;
+  }
+}
+
+.hideShowPassword-toggle-hide {
+	outline: none;
+	&:after {
+		.transform(rotate(180deg));
+	}
+}
+
+@media screen and (max-width: 1440px) {
+	.hideShowPassword-toggle {
+		right: 13px !important;
+		margin-top: -5px;
+		width: 23px;
+		height: 11px;
+
+		&:after {
+			.svg-icon(icon-wink, 23px, 11px);
+			margin-top: -5px;
+			margin-left: -11px;
+		}
+	}
+}

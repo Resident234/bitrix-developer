@@ -1,0 +1,17 @@
+.preloader.address{
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url("/local/components/peppers/send_letter/templates/.default/preloader.GIF") no-repeat center rgba(255, 255, 255, 0.1);
+}
+
+.hidden{
+    display: none;
+}
+
+.b-form{
+    position: relative;
+}

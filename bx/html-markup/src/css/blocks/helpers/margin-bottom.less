@@ -1,0 +1,17 @@
+.loop_margin-bottom(@counter) when (@counter > 0) {
+	.loop_margin-bottom((@counter - 5));
+	.margin-bottom__@{counter}px{
+		margin-bottom: @counter*1px;
+	}
+}
+
+.loop_margin-bottom(100);
+
+.loop_margin-bottom__important(@counter) when (@counter > 0) {
+	.loop_margin-bottom__important((@counter - 5));
+	.margin-bottom__@{counter}px__important{
+		margin-bottom: @counter*1px !important;
+	}
+}
+
+.loop_margin-bottom__important(100);

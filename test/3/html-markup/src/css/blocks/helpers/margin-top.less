@@ -1,0 +1,17 @@
+.loop_margin-top(@counter) when (@counter > 0) {
+	.loop_margin-top((@counter - 10));
+	.margin-top__@{counter}px{
+		margin-top: @counter*1px;
+	}
+}
+
+.loop_margin-top(500);
+
+.loop_margin-top__important(@counter) when (@counter > 0) {
+	.loop_margin-top__important((@counter - 10));
+	.margin-top__@{counter}px__important{
+		margin-top: @counter*1px !important;
+	}
+}
+
+.loop_margin-top__important(500);

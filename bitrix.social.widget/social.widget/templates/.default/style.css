@@ -1,0 +1,83 @@
+
+.social_widget_container{
+    width:100%;
+    display:inline-block;
+}
+
+.social_widget {
+    width:calc(23% - 27px);
+    display:inline-block;
+    height: 275px;
+    float:left;
+    margin-right:13px;
+    overflow: hidden;
+}
+
+.social_widget.social_widget2 {
+    width:26%;
+
+}
+
+.social_widget.social_widget3{
+    width:calc(25% + 1px);
+
+}
+
+
+.social_widget.social_widget5{
+    margin-right:0px;
+    width:24%;
+    position: relative;
+    background-color: #fff;
+    border-radius:5px;
+}
+
+
+.social_widget .ico {
+    background-image: url(/img/bottom_social_ico.png);
+    background-repeat: no-repeat;
+    height: 50px;
+    width: 60px;
+    display: block;
+    margin: 0 auto 5px;
+    background-position: -479px 0px;
+}
+
+.social_widget .title {
+    /*font: 18px/18px "Roboto Condensed";*/
+    font:bold 16px/36px 'PT Sans', sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #000;
+    font-weight: 100;
+    margin-bottom: 5px;
+    display: block;
+    text-align: center;
+    height:20px;
+}
+
+.social_widget .count {
+    /*font: 14px/18px "Roboto Condensed";*/
+    font:bold 16px/36px 'PT Sans', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align:center;
+    width: 100%;
+    line-height: 18px;
+}
+
+.social_widget .ytsubscribe_container {
+    position:absolute;
+    bottom:10px;
+    left:50%;
+    margin-left:-95px;
+    text-align: center;
+    background-color:#1e1c1d;
+    padding:10px;
+    border-radius:5px;
+}
+
+
+.social_widget5 .block{
+    margin-top:10px;
+}

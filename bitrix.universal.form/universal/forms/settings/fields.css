@@ -1,0 +1,37 @@
+#NextypeFormsFields {
+    padding: 15px 0;
+}
+
+table.NextypeFormsField {
+    border:2px solid #efefef;
+    padding: 1%;
+    position:relative;
+    width: 98%;
+    margin-bottom: 15px;
+}
+
+table.NextypeFormsField button.remove {
+    position:absolute;
+    right:0;
+    top:0;
+    background: #e1edf8;
+    border: none;
+    display: block;
+    cursor:pointer;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+}
+
+table.NextypeFormsField textarea {
+    width: 98%;
+}
+
+table.NextypeFormsField label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+table.NextypeFormsField input[type=checkbox] {
+    margin-top: 22px;
+}

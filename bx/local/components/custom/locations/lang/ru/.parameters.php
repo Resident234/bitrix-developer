@@ -1,0 +1,12 @@
+<?
+$MESS['LOCATION_IBLOCK_MODULE_NOT_INSTALLED'] = 'Модуль "Инфоблоки" не установлен';
+$MESS['LOCATION_PARAMETERS_SORT_ID'] = 'ID';
+$MESS['LOCATION_PARAMETERS_SORT_NAME'] = 'Название';
+$MESS['LOCATION_PARAMETERS_SORT_SORT'] = 'Индекс сортировки';
+$MESS['LOCATION_PARAMETERS_SORT_ASC'] = 'По возрастанию';
+$MESS['LOCATION_PARAMETERS_SORT_DESC'] = 'По убыванию';
+$MESS['LOCATION_PARAMETERS_HL_ID'] = 'HL блок';
+$MESS['LOCATION_PARAMETERS_COUNT'] = 'Количество элементов';
+$MESS['LOCATION_PARAMETERS_SORT_FIELD'] = 'Поле сортировки';
+$MESS['LOCATION_PARAMETERS_SORT_DIRECTION'] = 'Направление сортировки';
+?>

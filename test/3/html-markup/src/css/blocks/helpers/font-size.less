@@ -1,0 +1,17 @@
+.loop_font-size(@counter) when (@counter > 0) {
+	.loop_font-size((@counter - 5));
+	.font-size__@{counter}percent{
+		font-size: @counter*1%;
+	}
+}
+
+.loop_font-size(100);
+
+.loop_font-size__important(@counter) when (@counter > 0) {
+	.loop_font-size__important((@counter - 5));
+	.font-size__@{counter}percent__important{
+		font-size: @counter*1% !important;
+	}
+}
+
+.loop_font-size__important(100);

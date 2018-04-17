@@ -1,0 +1,142 @@
+.arcticmodal-overlay,
+.arcticmodal-container { position: fixed; left: 0; top: 0; right: 0; bottom: 0; z-index: 1000; }
+.arcticmodal-container { overflow: auto; margin: 0; padding: 0; border: 0; border-collapse: collapse; }
+*:first-child+html .arcticmodal-container { height: 100% }
+.arcticmodal-container_i { height: 100%; margin: 0 auto; }
+.arcticmodal-container_i2 { padding: 24px; margin: 0; border: 0; vertical-align: middle; }
+.arcticmodal-error { padding: 20px; border-radius: 10px; background: #000; color: #fff; }
+.arcticmodal-loading { width: 80px; height: 80px; border-radius: 10px; background: #000 url(loading.gif) no-repeat 50% 50%; }
+
+.nextype-button {
+    display: inline-block;
+    border: none;
+    background: #1970c9;
+    border-radius: 2px;
+    text-align: center;
+    padding: 0 20px;
+    color: #fff;
+    height: 41px;
+    line-height: 41px;
+    font-family: Arial;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.box-modal {
+    background: #fff;
+    padding: 35px 25px;
+    border-radius: 4px;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.box-modal > .arcticmodal-close {
+    
+    position: absolute;
+    font-family: Arial;
+    color: #1970c9;
+    text-shadow: 1px 1px #efefef;
+    font-size: 60px;
+    right: 40px;
+    top: 20px;
+    cursor: pointer;
+}
+
+.box-modal > h4 {
+    display: block;
+    font-size: 30px;
+    text-transform: uppercase;
+    margin: 0 0 15px 10px;
+    font-family: Arial;
+}
+
+.nextype-form {
+    padding: 15px 10px;
+    width: 500px;
+    
+}
+
+.nextype-form .row {
+    font-family: Arial;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.nextype-form .row label {
+    display: block;
+    color: #525c70;
+    margin-bottom: 5px;
+}
+
+.nextype-form .row input[type=text],
+.nextype-form .row input[type=email],
+.nextype-form .row select,
+.nextype-form .row textarea {
+    font-size: 16px;
+    height: 31px;
+    background: #f0f4f8;
+    border: 1px solid #BDC9D6;
+    border-radius: 2px;
+    font-weight: normal;
+    color: #333333;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-family: Arial;
+    -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    width: 100%;
+    padding: 0;
+    text-indent: 10px;
+    padding: 3px 0;
+}
+
+.nextype-form .row .error {
+    border: 1px solid #e02222!important;
+}
+
+.nextype-form .row textarea {
+    height: 100px;
+}
+
+.nextype-form .row span.required {
+    color: #e02222;
+    font-size: 12px;
+    display: inline-block;
+    margin-left: 4px;
+}
+
+.nextype-form .row .error-tip {
+    color: #e02222;
+    font-size: 11px;
+    margin-top: 5px;
+}
+
+.nextype-form .success {
+    background: #71b521;
+    color: #fff;
+    font-family: Arial;
+    padding: 8px 10px;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.nextype-form .row.submit {
+    text-align: center;
+}
+
+.nextype-form .row.submit button[type=submit] {
+    display: inline-block;
+    border: none;
+    background: #1970c9;
+    border-radius: 2px;
+    text-align: center;
+    padding: 0 20px;
+    color: #fff;
+    height: 41px;
+    line-height: 41px;
+    font-family: Arial;
+    font-size: 16px;
+    cursor: pointer;
+}

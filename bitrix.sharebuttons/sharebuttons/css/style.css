@@ -1,0 +1,24 @@
+.pluso-more{
+    display:none !important;
+}
+
+.pluso-wrap > a{
+    background: none !important;
+}
+
+.pluso-wrap{
+    border-radius:0px !important;
+    -webkit-border-radius: 0px !important;
+    -moz-border-radius: 0px !important;
+}
+
+.pluso{
+    border-radius:0px !important;
+    -webkit-border-radius: 0px !important;
+    -moz-border-radius: 0px !important;
+}
+
+
+.hidden{
+    display:none !important;
+}

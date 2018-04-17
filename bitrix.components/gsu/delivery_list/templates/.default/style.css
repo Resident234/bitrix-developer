@@ -1,0 +1,12 @@
+.pickup-placemark-description{
+	white-space : pre-wrap;
+	min-width   : 200px;
+}
+.b-map__map.pvz_map{
+	width : 655px;
+}
+.preloader.preloader_delivery{
+	top       : 90px;
+	/*background-position : 700px center;*/
+	max-width : 1300px; /*чтобы наличие/отсутствие полосы прокрутки не влияло на положение гифки*/
+}

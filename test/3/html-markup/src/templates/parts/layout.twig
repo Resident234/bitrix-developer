@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block title %}
+    {% endblock %}
+
+
+    <!-- STYLES -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+</head>
+
+<body>
+
+{#BLOCKS WPAPPER#}
+<div class="blocks-wrapper js-blocks-wrapper">
+    
+    {% block header %}
+        {% include 'parts/header.twig' %}
+    {% endblock %}
+
+    {% block content %}
+    {% endblock %}
+
+    {% block footer %}
+        {% include 'parts/footer.twig' %}
+    {% endblock %}
+
+</div>
+{#/BLOCKS WPAPPER#}
+
+
+<!-- uncache -->
+<link rel="stylesheet" href="css/main.css">
+<!-- enduncache -->
+
+{% block scripts %}
+    <!-- uncache -->
+    <script src="scripts/app.min.js"></script>
+    <script src="scripts/site.js"></script>
+    <!-- enduncache -->
+{% endblock %}
+
+</body>
+</html>

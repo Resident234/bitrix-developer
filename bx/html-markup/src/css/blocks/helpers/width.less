@@ -1,0 +1,17 @@
+.loop_width__percent(@counter) when (@counter > 0) {
+	.loop_width__percent((@counter - 5));
+	.width__@{counter}percent{
+		width: @counter*1%;
+	}
+}
+
+.loop_width__percent(100);
+
+.loop_width__percent__important(@counter) when (@counter > 0) {
+	.loop_width__percent__important((@counter - 5));
+	.width__@{counter}percent__important{
+		width: @counter*1% !important;
+	}
+}
+
+.loop_width__percent__important(100);

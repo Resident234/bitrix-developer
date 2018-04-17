@@ -1,0 +1,43 @@
+{% extends 'parts/layout.twig' %}
+
+{% block title %}
+	<title>Рейтинг</title>
+{% endblock %}
+
+{% block content %}
+	<div class="star-rating__container js-star-rating__container container">
+
+		<select class="js-rating-selector display-none" name="stars">
+			<option value="0" selected="selected">Оценка</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+		</select>
+
+		<ul class="star-rating__list js-star-rating__list" data-current-rating="0">
+			<li class="star-rating__item js-star-rating__item js-star-rating__item-5" data-num="5">
+				<i class="star-rating__item-icon star-rating__item-icon_stars"></i>
+			</li>
+			<li class="star-rating__item js-star-rating__item js-star-rating__item-4" data-num="4">
+				<i class="star-rating__item-icon star-rating__item-icon_stars"></i>
+			</li>
+			<li class="star-rating__item js-star-rating__item js-star-rating__item-3" data-num="3">
+				<i class="star-rating__item-icon star-rating__item-icon_stars"></i>
+			</li>
+			<li class="star-rating__item js-star-rating__item js-star-rating__item-2" data-num="2">
+				<i class="star-rating__item-icon star-rating__item-icon_stars"></i>
+			</li>
+			<li class="star-rating__item js-star-rating__item  js-star-rating__item-1" data-num="1">
+				<i class="star-rating__item-icon star-rating__item-icon_stars"></i>
+			</li>
+		</ul>
+
+		<div class="star-rating__button-wrap margin-bottom__10px">
+			<a href="#" class="btn btn_rating js-star-rating__button">Сохранить</a>
+		</div>
+
+
+	</div>
+{% endblock %}

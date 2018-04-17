@@ -1,0 +1,17 @@
+.loop_top(@counter) when (@counter > 0) {
+	.loop_top((@counter - 10));
+	.top__@{counter}px{
+		top: @counter*1px;
+	}
+}
+
+.loop_top(500);
+
+.loop_top__important(@counter) when (@counter > 0) {
+	.loop_top__important((@counter - 10));
+	.top__@{counter}px__important{
+		top: @counter*1px !important;
+	}
+}
+
+.loop_top__important(500);

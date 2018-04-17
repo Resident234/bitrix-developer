@@ -1,0 +1,498 @@
+.checkbox-styled-green-border {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+
+  border: 2px solid #222;
+  border-radius: 4px;
+  padding-left: 18px;
+  padding-right: 18px;
+  height: 42px;
+  line-height: 42px;
+
+  color: white;
+  .light();
+  font-size: 18px;
+  text-transform: uppercase;
+  cursor: pointer;
+  .transition(all .2s ease);
+
+  .subscribe-block & {
+    border: 2px solid #746b68;
+    &:hover {
+      border: 2px solid #5f5653;
+    }
+  }
+  &:hover {
+    border: 2px solid @green-color-hover;
+  }
+  &.checked {
+    border: 2px solid @green-color;
+  }
+  &.disabled {
+    color: #7c7c7c;
+    cursor: default;
+  }
+}
+
+.checkbox-styled-red-border {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+
+  border: 2px solid #222;
+  border-radius: 4px;
+  padding-left: 18px;
+  padding-right: 18px;
+  height: 42px;
+  line-height: 42px;
+
+  color: white;
+  .light();
+  font-size: 18px;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover {
+    border: 2px solid @red-color-hover;
+  }
+  &.checked {
+    border: 2px solid @red-color;
+  }
+  &.disabled {
+    color: #7c7c7c;
+    cursor: default;
+  }
+}
+
+.checkbox-styled-green-text {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+
+  border: 2px solid transparent;
+  border-radius: 4px;
+  padding-left: 18px;
+  padding-right: 18px;
+  height: 42px;
+  line-height: 42px;
+
+  color: @green-color;
+  .light();
+  font-size: 18px;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover {
+    border: 2px solid @green-color-hover;
+  }
+
+  &.checked {
+    border: 2px solid @green-color;
+    color: #222;
+  }
+  &_checked {
+    border: 2px solid @green-color;
+    color: #222;
+  }
+  &.disabled {
+    color: #7c7c7c;
+    cursor: default;
+  }
+  &_kitchen {
+    padding-left: 40px !important;
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      .svg-icon(icon-logo-red, 14px, 16px);
+    }
+  }
+}
+
+.checkbox-styled-red-text {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+
+  border: 2px solid transparent;
+  border-radius: 4px;
+  padding-left: 18px;
+  padding-right: 18px;
+  height: 42px;
+  line-height: 42px;
+
+  color: @red-color;
+  .light();
+  font-size: 18px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all .3s;
+  &:hover {
+    border: 2px solid @red-color-hover;
+  }
+
+  &.checked {
+    border: 2px solid @red-color;
+    background: @red-color;
+    color: white;
+    &:hover {
+      background: @red-color-hover;
+      border-color: @red-color-hover;
+    }
+  }
+  &_checked {
+    border: 2px solid @red-color;
+    color: #222;
+  }
+  &.disabled {
+    color: #7c7c7c;
+    cursor: default;
+  }
+}
+
+.checkbox-circle {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  flex: 0 0 30px;
+  &:hover, .b-filter__check:hover &{
+    background: darken(white,15%);
+
+    &:before{
+      opacity: 0;
+    }
+  }
+  &.checked {
+    border: 2px solid @green-color;
+    background: @green-color;
+
+    &:before{
+      opacity: 1;
+    }
+    &:hover,.b-filter__check:hover &{
+      
+      border: 2px solid @green-color-hover;
+      background: @green-color-hover;
+
+      &:before{
+        opacity: 1;
+      }
+    }
+  }
+
+  &:before {
+
+    content: "";
+    position: absolute;
+    background: url('../img/icon-check.svg') no-repeat 0 0;
+    background-size: 16px 11px;
+    width: 16px;
+    height: 11px;
+    margin-left: -8px;
+    margin-top: -5px;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    transition: all .3s;
+  }
+  
+;
+}
+
+.radio-styled-green {
+  display: inline-block;
+  vertical-align: middle;
+
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  .box-sizing(border-box);
+  background: white;
+
+  &:before {
+    content: '';
+    position: absolute;
+    .sprite(@icon-radio-arrow);
+    top: 50%;
+    left: 50%;
+    margin-top: -@icon-radio-arrow-height / 2;
+    margin-left: -@icon-radio-arrow-width / 2;
+  }
+  &:hover {
+    border-color: @green-color;
+  }
+  &.checked {
+    background: @green-color;
+    border-color: @green-color;
+  }
+}
+
+.checkbox-lite-style {
+  height: 42px;
+  line-height: 42px;
+  border-radius: 4px;
+  border: 2px solid #f5f5f5;
+  padding: 0 20px;
+  margin-right: 8px;
+
+  font-size: @18;
+  text-transform: uppercase;
+  color: #222222;
+  .light();
+
+  &:hover {
+    border: 2px solid @green-color-hover;
+  }
+  &.checked {
+    border: 2px solid @green-color;
+  }
+  &.disabled {
+    color: #7c7c7c;
+    cursor: default;
+  }
+}
+
+.where-to-buy-checkbox {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+
+  border: 2px solid transparent;
+  border-radius: 4px;
+  padding-left: 18px;
+  padding-right: 18px;
+  height: 42px;
+  line-height: 42px;
+
+  color: #222222;
+  .light();
+  font-size: 18px;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover {
+    border: 2px solid @green-color-hover;
+  }
+
+  &.checked {
+    border: 2px solid @green-color;
+    color: #222;
+  }
+  &_checked {
+    border: 2px solid @green-color;
+    color: #222;
+  }
+  &.disabled {
+    color: #7c7c7c;
+    cursor: default;
+  }
+}
+
+.account-checkbox {
+  border-radius: 4px;
+  width: 48px;
+  height: 48px;
+  background-color: #f5f5f5;
+  margin-right: 21px;
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    .svg-icon(icon-checked, 24px, 18px);
+    margin-top: -9px;
+    margin-left: -12px;
+    display: none;
+  }
+  &.checked {
+    &:after {
+      display: block;
+    }
+  }
+  &_checked {
+    &:after {
+      display: block;
+    }
+  }
+  &.disabled {
+    color: #7c7c7c;
+    cursor: default;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+
+  .checkbox-styled-green-border {
+    margin-right: 6px;
+    padding-left: 13px;
+    padding-right: 13px;
+    height: 31px;
+    line-height: 31px;
+    font-size: @13;
+  }
+
+  .checkbox-styled-red-border {
+    margin-right: 6px;
+    padding-left: 13px;
+    padding-right: 13px;
+    height: 31px;
+    line-height: 31px;
+    font-size: @13;
+  }
+
+  .checkbox-styled-green-text {
+    margin-right: 6px;
+    padding-left: 13px;
+    padding-right: 13px;
+    height: 31px;
+    line-height: 31px;
+    font-size: @13;
+  }
+
+  .checkbox-styled-red-text {
+    margin-right: 6px;
+    padding-left: 13px;
+    padding-right: 13px;
+    height: 31px;
+    line-height: 31px;
+    font-size: @13;
+  }
+
+  .radio-styled-green {
+
+    width: 22px;
+    height: 22px;
+
+    &:before {
+      .sprite(@icon-radio-arrow-small);
+      margin-top: -@icon-radio-arrow-small-height / 2;
+      margin-left: -@icon-radio-arrow-small-width / 2;
+    }
+  }
+
+  .checkbox-lite-style {
+    height: 31px;
+    line-height: 31px;
+    padding: 0 15px;
+    margin-right: 6px;
+    font-size: @13;
+  }
+
+  .where-to-buy-checkbox {
+    margin-right: 6px;
+    padding-left: 13px;
+    padding-right: 13px;
+    height: 31px;
+    line-height: 31px;
+    font-size: @13;
+  }
+
+  .account-checkbox {
+    width: 36px;
+    height: 36px;
+    margin-right: 15px;
+    &:after {
+      .svg-icon(icon-checked, 18px, 13px);
+      margin-top: -6px;
+      margin-left: -9px;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .checkbox-styled-green-border {
+    .subscribe-block & {
+      height: 42px;
+      line-height: 42px;
+      padding: 0 20px;
+      font-size: @18;
+      margin-bottom: 15px;
+    }
+  }
+
+  .checkbox-styled-green-text {
+    height: 42px;
+    line-height: 42px;
+    font-size: @18;
+  }
+
+  .checkbox-styled-red-text {
+    .shop-filters & {
+      //margin-bottom: 15px;
+    }
+  }
+
+  .checkbox-styled-red-border {
+    .subscribe-block & {
+      height: 42px;
+      line-height: 42px;
+      padding: 0 20px;
+      font-size: @18;
+      margin-bottom: 15px;
+    }
+  }
+
+  .where-to-buy-checkbox {
+    margin-right: 8px;
+    padding-left: 18px;
+    padding-right: 18px;
+    height: 42px;
+    line-height: 42px;
+    font-size: @18;
+  }
+
+  .checkbox-lite-style {
+    height: 42px;
+    line-height: 42px;
+    padding: 0 20px;
+    margin-right: 8px;
+    font-size: @18;
+    margin-bottom: 5px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .checkbox-styled-green-border {
+    .subscribe-block & {
+      margin-bottom: 15px;
+    }
+  }
+
+  .checkbox-styled-red-border {
+    .subscribe-block & {
+      margin-bottom: 15px;
+    }
+  }
+
+  .checkbox-styled-red-text {
+    border: 2px solid #222;
+    color: #222222;
+
+    .kitchen-reviews__filter &{
+      margin: 5px;
+    }
+  }
+
+  .checkbox-styled-green-text {
+    border: 2px solid #222;
+    color: #222222;
+    .shop-filters & {
+      margin-bottom: 15px;
+    }
+  }
+
+  .where-to-buy-checkbox {
+    .shop-filters & {
+      border: 2px solid #222;
+      margin-bottom: 15px;
+    }
+  }
+}

@@ -1,0 +1,132 @@
+/*
+LESS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: @icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+@icon-home: x y offset_x offset_y width height total_width total_height image_path name;
+
+At the bottom of this section, we provide information about the spritesheet itself
+@spritesheet: width height image @spritesheet-sprites;
+*/
+@icon-rating-star-active-name: 'icon-rating-star-active';
+@icon-rating-star-active-x: 0px;
+@icon-rating-star-active-y: 0px;
+@icon-rating-star-active-offset-x: 0px;
+@icon-rating-star-active-offset-y: 0px;
+@icon-rating-star-active-width: 18px;
+@icon-rating-star-active-height: 16px;
+@icon-rating-star-active-total-width: 56px;
+@icon-rating-star-active-total-height: 52px;
+@icon-rating-star-active-image: '../img/sprite.png';
+@icon-rating-star-active: 0px 0px 0px 0px 18px 16px 56px 52px '../img/sprite.png' 'icon-rating-star-active';
+@icon-rating-star-small-active-name: 'icon-rating-star-small-active';
+@icon-rating-star-small-active-x: 38px;
+@icon-rating-star-small-active-y: 0px;
+@icon-rating-star-small-active-offset-x: -38px;
+@icon-rating-star-small-active-offset-y: 0px;
+@icon-rating-star-small-active-width: 18px;
+@icon-rating-star-small-active-height: 16px;
+@icon-rating-star-small-active-total-width: 56px;
+@icon-rating-star-small-active-total-height: 52px;
+@icon-rating-star-small-active-image: '../img/sprite.png';
+@icon-rating-star-small-active: 38px 0px -38px 0px 18px 16px 56px 52px '../img/sprite.png' 'icon-rating-star-small-active';
+@icon-rating-star-small-name: 'icon-rating-star-small';
+@icon-rating-star-small-x: 0px;
+@icon-rating-star-small-y: 36px;
+@icon-rating-star-small-offset-x: 0px;
+@icon-rating-star-small-offset-y: -36px;
+@icon-rating-star-small-width: 18px;
+@icon-rating-star-small-height: 16px;
+@icon-rating-star-small-total-width: 56px;
+@icon-rating-star-small-total-height: 52px;
+@icon-rating-star-small-image: '../img/sprite.png';
+@icon-rating-star-small: 0px 36px 0px -36px 18px 16px 56px 52px '../img/sprite.png' 'icon-rating-star-small';
+@icon-rating-star-name: 'icon-rating-star';
+@icon-rating-star-x: 38px;
+@icon-rating-star-y: 36px;
+@icon-rating-star-offset-x: -38px;
+@icon-rating-star-offset-y: -36px;
+@icon-rating-star-width: 18px;
+@icon-rating-star-height: 16px;
+@icon-rating-star-total-width: 56px;
+@icon-rating-star-total-height: 52px;
+@icon-rating-star-image: '../img/sprite.png';
+@icon-rating-star: 38px 36px -38px -36px 18px 16px 56px 52px '../img/sprite.png' 'icon-rating-star';
+@spritesheet-width: 56px;
+@spritesheet-height: 52px;
+@spritesheet-image: '../img/sprite.png';
+@spritesheet-sprites: @icon-rating-star-active @icon-rating-star-small-active @icon-rating-star-small @icon-rating-star;
+@spritesheet: 56px 52px '../img/sprite.png' @spritesheet-sprites;
+
+/*
+The provided classes are intended to be used with the array-like variables
+
+.icon-home {
+  .sprite-width(@icon-home);
+}
+.icon-email {
+  .sprite(@icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.sprite-width(@sprite) {
+  width: extract(@sprite, 5);
+}
+
+.sprite-height(@sprite) {
+  height: extract(@sprite, 6);
+}
+
+.sprite-position(@sprite) {
+  @sprite-offset-x: extract(@sprite, 3);
+  @sprite-offset-y: extract(@sprite, 4);
+  background-position: @sprite-offset-x @sprite-offset-y;
+}
+
+.sprite-image(@sprite) {
+  @sprite-image: extract(@sprite, 9);
+  @sprite-image-bare: ~`"@{sprite-image}".slice(1, -1)`;
+  background-image: url(@sprite-image-bare);
+}
+
+.sprite(@sprite) {
+  .sprite-image(@sprite);
+  .sprite-position(@sprite);
+  .sprite-width(@sprite);
+  .sprite-height(@sprite);
+}
+
+/*
+The `.sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of LESS
+
+This must be run when you have at least 2 sprites.
+  If run with a single sprite, then there will be reference errors.
+
+.sprites(@spritesheet-sprites);
+*/
+.sprites(@sprites, @i: 1) when (@i <= length(@sprites)) {
+  @sprite: extract(@sprites, @i);
+  @sprite-name: e(extract(@sprite, 10));
+  .@{sprite-name} {
+    .sprite(@sprite);
+  }
+  .sprites(@sprites, @i + 1);
+}

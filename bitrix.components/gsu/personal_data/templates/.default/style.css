@@ -1,0 +1,14 @@
+.preloader{
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left:-30px;
+    top:-30px;
+    background: url("preloader.GIF") no-repeat center rgba(142, 205, 138, 0.1);
+}
+
+.jq-checkbox.registration_is-opt{
+    width: 20px;
+    height: 20px;
+}

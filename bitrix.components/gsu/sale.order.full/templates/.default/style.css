@@ -1,0 +1,113 @@
+table.sale_order_full
+{
+	width:100%;
+	background-color:#F9FAFB;
+	border-collapse:collapse;
+}
+
+/*Table head*/
+table.sale_order_full th
+{
+	background-image:url(images/table_head.gif);
+	background-repeat:repeat-x;
+	text-align: left;
+	color:#25639A;
+}
+
+/* Table cells and heads*/
+table.sale_order_full th, table.sale_order_full td
+{
+	border:1px solid #ADC3D5;
+	padding: 3px 5px;
+	vertical-align:top;
+}
+
+table.sale_order_full_table_no_border
+{
+	width:100%;
+	background-color:#FFFFFF;
+	border-collapse:collapse;
+}
+
+/* Table cells and heads*/
+table.sale_order_full_table_no_border td
+{
+	padding: 3px 5px;
+	vertical-align:top;
+}
+
+table.sale_order_full_table td {
+	vertical-align:middle;
+}
+table.sale_order_full_table td img {
+	margin-right:5px;
+}
+.sof-req{color:red;}
+
+.b-form__row_check.error .b-form__row__input__error {
+    display: block;
+}
+
+.b-map #map_wrapper1 {
+    display: none;
+}
+
+.delivery_hidden {
+    display: none!important;
+}
+
+.pickup-description {
+    display: none;
+}
+
+.b-form__row.b-form__row_check.error{
+	position: relative;
+}
+
+.b-order__step.step2 textarea.b-form__row__input{
+	line-height: 35px;
+	padding: 0 12px;
+	width: 100%;
+	box-sizing: border-box;
+	border-radius: 2px;
+	border: 2px solid #999;
+	color: #28292D;
+	font-size: 14px;
+	outline: 0 none;
+	resize: none;
+	margin-top: 25px;
+}
+.b-form__row__textarea{
+	position: relative;
+}
+.b-order__step.step2 .b-form__row__textarea.error textarea.b-form__row__input{
+	border-color:#F05C62;
+}
+.b-form__row__textarea.error .b-form__row__input__error{
+	display: block;
+}
+.b-order__city-fsel a
+{
+	white-space: nowrap;
+}
+.b-form__row_delivery_description{
+	margin-bottom: 20px;
+}
+.b-form__row__input__error.delivery__error{
+	top:auto;
+	width: auto;
+}
+form font.tablebodytext input[type="submit"]{
+	background: rgb(207, 91, 97);
+	height: 30px;
+	line-height: 30px;
+	display: inline-block;
+	outline: 0 none;
+	color: rgb(255, 255, 255);
+	padding: 0 25px;
+	border-radius: 2px;
+	transition: all 0.3s ease 0s;
+	font-size: 14px;
+	text-decoration: none;
+	cursor: pointer;
+}
